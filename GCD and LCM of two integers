@@ -1,0 +1,20 @@
+#include<stdio.h>    //Link section
+void main()
+     {
+          // Declare variables
+        int num1,num2,LCM,GCD,t;
+          // Get values from user
+        printf("\nEnter numbers");
+        scanf("%d %d",&num1,&num2);
+        int a=num1,b=num2;
+        while(num2!=0)
+             {
+                t=num2;
+                num2=num1%num2;
+                num1=t;
+             }
+        GCD=num1;
+        printf("\nGCD is %d",GCD);
+        LCM=(a*b)/GCD;
+        printf("\nLCM is %d",LCM);
+    }
