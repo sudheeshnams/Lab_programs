@@ -1,0 +1,16 @@
+#include<stdio.h>    // Link section 
+#include<math.h>
+void main()
+   {
+          // Declare variables 
+     float sinvalue,cosvalue,x;
+         // Get values from the user 
+     printf("\n Enter the value:");
+     scanf("%f",&x);
+     
+     sinvalue=sin(x);
+     cosvalue=cos(x);
+     
+     printf("\n The sin value of %f=%f",x,sinvalue);
+     printf("\n The cosine value of %f=%f",x,cosvalue);
+   }
