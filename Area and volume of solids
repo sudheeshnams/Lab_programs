@@ -1,0 +1,36 @@
+#include <stdio. h>  // Link section 
+#include <math.h>
+void main()
+     {
+         // Declare variables 
+       int ch;
+       float r, h,x,y,z,r1
+       printf("Enter your option\n1.cylinder\n2.cuboid\n3.sphere\n4.cone\ncube");
+       scanf("%d",&ch); 
+       switch(ch)
+          {
+             case1 :
+             printf("Enter the radius and height of cylinder ");
+             scanf("%f%f",&r, &h);
+             printf("surface area=%f volume =%f",2*3.14*(r+h),3.14*r*r*h);
+             break; 
+             
+             case2 :
+             printf("Enter the 3 sides of the cubiod");
+             scanf("%f%f%f",&x, &y, &z); 
+             printf("surface area =%f volume=%f",2*x*z+2*x*y+2*y*z,x*y*z);
+             break; 
+       
+             case3 :
+             printf("Enter the radius of the sphere");
+             scanf("%d",&r1); 
+             printf("surface area =%f volume=%f",4*3.14*r*r,3.14*r*r*h);
+             break; 
+             
+             case4 :
+             printf("Enter the length of the cube");
+             scanf("%f",p); 
+             printf("surface area=%f volume =%f, 6*a*a,a*a*a);
+  
+          }
+      }
