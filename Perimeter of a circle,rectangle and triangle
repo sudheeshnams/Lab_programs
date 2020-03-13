@@ -1,0 +1,19 @@
+#include<stdio.h>     // Link section 
+void main()
+      {
+          // Declare variables 
+        int radius,length,breadth,base,side1,side2,perm1,perm2,perm3;
+          // Get values from the user 
+        printf("Enter radius");
+        scanf("%d",&radius);
+        printf("Enter length and breadth ");
+        scanf("%d %d",&length,&breadth);
+        printf("Enter base,side1 and side2 of a triangle:);
+        scanf("%d %d %d",&base,&side1,&side2);
+        perm1=2*3.14*radius;
+        perm2=2*(length+breadth);
+        perm3= base+side1+side2;
+        printf("Perimeter of circle is %d",perm1);
+        printf("Perimeter of rectangle is %d",perm2);
+        printf("Perimeter of triangle is %d",perm4);
+      }
