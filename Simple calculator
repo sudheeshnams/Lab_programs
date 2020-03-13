@@ -1,0 +1,42 @@
+#include<studio.h>  // Link section 
+void main()
+
+      {
+        //Declaring variables
+         float num1,num2,result;
+         char oprtr;
+
+        /* Get numbers and operation to be carried out from user */
+         printf("\nEnter num1,num2 and operator");
+         scanf("%f %f %c",&num1,&num2,&oprtr);
+
+        /* Checks the operator and perform the calculations */
+         if(oprtr=='+')
+            {
+               result=num1+num2;
+               printf("The result is %f",result);
+            }
+
+         else if(oprtr=='-')
+            {
+               result=num1-num2;
+               printf("The result is %f",result);
+            }
+
+         else if(oprtr=='*')
+            {
+               result=num1*num2;
+               printf("The result is %f",result);
+            }
+
+         else if(oprtr=='/')
+            {
+               result=num1/num2;
+               printf("The result is %f",result);
+            }
+
+         else
+               printf("Invalid entry");
+
+     
+      }
