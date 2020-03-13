@@ -1,0 +1,16 @@
+#include<stdio.h>   // Link section 
+void main()
+      {
+          // Declare variables 
+        int num,I,sum=0;
+        printf("\please enter any positive integer \n");
+        scanf("%d",&num);
+        sum=(num*(num+1)*(2*num+1))/6;
+        for(i=1;i<=num;i++)
+            {
+               if(i!=num)
+               printf("%d^2+",i);
+               else
+               printf("%d^2=%d",i,sum);
+            }
+      }
