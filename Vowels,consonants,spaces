@@ -1,0 +1,18 @@
+#include<stdio.h>
+void main()
+     {
+        char s1[50];
+        int i,vowels=0,cons=0,spc=0;
+        printf("Enter string ending with $");
+        gets(s1);
+        for(i=0;s1[i]!='\0';i++)
+           {
+              if(s1[i]==' ')
+                spc++;
+              else if(s1[i]=='a'||s1[i]=='e'||s1[i]=='i'||s1[i]=='o'||s1[i]=='u')
+                vowels++;
+              else
+                cons++;
+           }
+       printf("\nSpaces=%d Vowels=%d Consonants=%d",spc,vowels,cons);
+   }
