@@ -1,0 +1,25 @@
+#include<stdio.h>
+struct employee{
+                  char name[20];
+                  int employee_id;
+                  float salary;
+               }e[60];
+               
+void main()
+     {
+        int num,i;
+        printf("Enter number");
+        scanf("%d"&num);
+        for(i=1;i<=num;i++)
+           {
+              printf("\nEnter name employee id and salary");
+              scanf("%s %d %f",e[i].name,&e[i].employee_id,&e[i].salary);
+           }
+        printf("\nDetails are");
+        for(i=1;i<=num;i++)
+           {
+              printf("\nEmployee %d",i);
+              printf("\n Name %s\t Employee Id %d\t Salary %f",e[i].name,e[i].employee_id,e[i].salary);
+           }
+    }
+              
