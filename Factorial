@@ -1,0 +1,29 @@
+#include<stdio.h.
+int factorial_recursive(int n)
+     {
+       int fact;
+       if(n==0)
+       return 1;
+       else
+       fact=n*factorial_recursive(n-1);
+       return fact;
+    }
+    
+int factorial(int n)
+    {
+       int i,fact=1;
+       for(i=1;i<=n;i++)
+          {
+             fact=fact*i;
+          }
+       return (fact);
+    }
+    
+void main()
+    {
+       int n;
+       printf("Enter number");
+       scanf("%d",&n);
+       printf("\nFactorial of %d using recursion is %d",n,factorial_recursive(n));
+       printf("\nFactorial of %d without using recursion is %d",n,factorial(n));
+   }
