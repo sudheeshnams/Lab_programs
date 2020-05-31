@@ -1,0 +1,17 @@
+#include<stdio.h>
+void main()
+     {
+        int n,copy,save=0;
+        printf("Enter a natural number");
+        scanf("%d",&n);
+        copy=n;
+        while(n>0)
+           {
+              save=save+(n%10)*(n%10)*(n%10);
+              n=n/10;
+           }
+       if(copy==save)
+         printf("\nNumber is armstrong");
+       else
+         printf("\nNumber is not armstrong");
+    }
