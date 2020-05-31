@@ -1,0 +1,111 @@
+#include<stdio.h>
+int read(int matrix[10][10],int rows,int cols)
+       {
+          int i,j;
+          for(i=0;i<rows;i++)
+             {
+                for(j=0;j<cols;j++)
+                  {
+                     scanf("%d",&matrix[i][j]);
+                  }
+             }
+      }
+      
+int sum(int matrix1[10][10],int matrix2[10][10],int rows,int cols)
+       {
+          int i,j,sum[10][10];
+          printf("\nSum is\n");
+          for(i=0;i<rows;i++)
+              {
+                 for(j=0;j<cols;j++)
+                    {
+                       sum[i][j]=matrix1[i][j]+matrix2[i][j];
+                    }
+              }
+          display(sum,rows,cols);
+       }
+   
+int product(int matrix1[10][10],int matrix2[10][10],int r1,int c1,int c2)
+       {
+          int prod[10][10],i,j,k;
+          printf("\nProduct is\n");
+          for(i=0;i<r1;i++)
+             {
+                for(j=0;j<c2;j++)
+                   {
+                     int sum=0;
+                     for(k=0;k<c1;k++)
+                        {
+                           sum=sum+matrix1[i][k]*matrix2[k][j];
+                           prod[i][j]=sum;
+                        }
+                   }
+             }
+         display(prod,r1,c2);
+      }
+      
+int transpose(int matrix[10][10],int rows,int cols)
+      {
+         int i,j,matrix1[10][10];
+         for(i=0;i<rows;i++)
+            {
+              for(j=0;j<cols;j++)
+                 {
+                    matrix1[j][i]=matrix[i][j];
+                 }
+            }
+         display(matrix1,cols,rows);
+     }
+     
+int display(int matrix[10][10],int rows,int cols)
+     {
+        int i,j;
+        for(i=0;i<rows;i++)
+            {
+                for(j=0;j<cols;j++)
+                   {
+                      printf("%d\t",matrix[i][j]);
+                   }
+            }
+    }
+    
+void main()
+     {
+        int option,matrix1[10][10],matrix2[10][10],r1,r2,c1,c2;
+        printf("\nChoose your task number from the options");
+        printf("\n1.Sum of two matrices\n2.Product of matrices\n3.Transpose of matrices\n");
+        scanf("%d",&option);
+        printf("Enter rowsize and colsize of matrix1");
+        scanf("%d %d",&r1,&c1);
+        printf("\nEnter matrix1");
+        read(matrix1,r1,c1);
+        printf("\nEnter rowsize and colsize of matrix2");
+        scanf("%d %d",&r2,&c2);
+        printf("\nEnter matrix2");
+        read(matrix2,r2,c2);
+        printf("\nMatrix1 is\n");
+        display(matrix1,r1,c1);
+        printf("\nmatrix2 is\n");
+        display(matrix2,r2,c2);
+        
+        switch(option)
+           {
+              case 1:if(r1==r2&&c1==c2)
+                        sum(matrix1,matrix2,r1,c1);
+                     else
+                        printf("\nAddition not possible");
+                     break;
+             case 2:if(r1==c2)
+                      product(matrix1,matrix2,r1,c1,c2);
+                    else
+                      printf("\nMultiplication not possible");
+                    break;
+            case 3:printf("\nTranspose of matrix1 is");
+                   transpose(matrix1,r1,c1);
+                   printf("\nTranspose of matrix2 is");
+                   transpose(matrix2,r2,c2);
+                   break;
+            default:printf("\nInvalid entry");
+          }
+   }
+                       
