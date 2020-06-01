@@ -10,13 +10,13 @@ union address{
              
 void main()
     {
-       union addresss a;
+       union address a;
        printf("Enter name");
        scanf("%s",a.name);
        printf("\nEnter house name");
        scanf("%s",a.house_name);
        printf("\nEnter city name");
-       scanf("%s',a.city_name);
+       scanf("%s",a.city_name);
        printf("\nEnter state");
        scanf("%s",a.state);
        printf("\nEnter pincode");
@@ -24,8 +24,9 @@ void main()
        printf("\nAddress is");
        printf("\nName:%s",a.name);
        printf("\nHouse name:%s",a.house_name);
-       printf("\nCity name:%s',a.city_name);
+       printf("\nCity name:%s",a.city_name);
        printf("\nState:%s",a.state);
        printf("\nPin:%s",a.pin);
   }
+    
        
